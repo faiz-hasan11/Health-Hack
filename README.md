@@ -1,9 +1,9 @@
 # Health Hack
 This website is a one stop solution for all your Health Needs. It provides 3 main features =>
 
-* It has a machine learning model integrated with it which helps to predict whether one suffers from diabetes or not. It has a form which takes as input various health condition of the user and predicts the result on the basis of the information given. Various models were made and at the end, RandomForest Classifier with best parameters was selected. It provided an accuracy of 90.9%. The data was taken from Kaggle which was uploaded by UCI Machine Learning.
-* It has a facility to get information about the doctors in the given city. It uses web scraping to do so. The data is scraped from [Practo](https://www.practo.com/). It has a form which takes as input the city. A list of names and locality of practice is then displayed. If inforamtion about a city is not available then appropriate message is displayed.
-* It also displays the facts and symptoms of Diabates. The data is taken from a verified source of [WHO](https://www.who.int/).
+* It has various machine learning models integrated with it which helps to predict whether one have kidney disease, heart disease, chronic kidney disease , diabetes or lung cancer. It has different forms which takes as input various health condition of the user and predicts the result on the basis of the information given. 
+* It has the facility to take input about the situation of the patient and on that basis it suggests drugs and cause of such health condition.This is done with the help of Lexigram API. 
+* It also calulates the BMI and tells whether one is underweight or overweight.
 
 ## Built With
 * [Django](https://www.djangoproject.com/) - The Web Framework used for backend
