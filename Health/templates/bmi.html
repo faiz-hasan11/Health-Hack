@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="test" >
+  <h1 class="small">– BMI Calculator –<h1/>
+</div>
+    <center>
+<div class="container">
+  <form id="contact" method="post" enctype="multipart/form-data" action="predictbmi">
+    {% csrf_token %}
+    <h3>Please Enter Details</h3>
+    <fieldset>
+      <input placeholder="Weight in Kg" type="text" tabindex="1" name="weightVal" required value={{temp.weight}}>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Height in Metres" tabindex="2" required type="text" id="lname" name="heightVal" value={{temp.height}}>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" value="Submit">Submit</button>
+    </fieldset>
+  </form>
+</div>
+</center>
+{% endblock %}

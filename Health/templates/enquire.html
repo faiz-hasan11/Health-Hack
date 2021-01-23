@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+<style media="screen">
+  .home-landing-subtext {
+    width: 90vw;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color:white;
+  }
+</style>
+<div class="test" >
+  <h1 class="small">– Get Enquiry –<h1/>
+</div>
+    <center>
+        <div class="home-landing-subtext">The results shown are for immediate enquiry.Please Contact A Doctor</div>
+<div class="container">
+
+  <form id="contact" method="post" enctype="multipart/form-data" action="enquiredata">
+    {% csrf_token %}
+    <h3>Please Enter Your Condition</h3>
+    <fieldset>
+      <textarea placeholder="EXAMPLE -- The patient was given some paracetamol for control of her pain. The patient suffers from fever , bipolar disorder and severe hypokalemia. She thinks her potassium might again be low." rows="8" cols="80" name="textVal" required value={{temp.text}}></textarea>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" value="Submit">Submit</button>
+    </fieldset>
+  </form>
+</div>
+</center>
+{% endblock %}

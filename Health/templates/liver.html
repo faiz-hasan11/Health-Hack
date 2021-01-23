@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="test" >
+  <h1 class="small">– Liver Disease Predictor–<h1/>
+</div>
+    <center>
+<div class="container">
+  <form id="contact" method="post" enctype="multipart/form-data" action="predictliver">
+    {% csrf_token %}
+    <h3>Please Enter Details</h3>
+    <fieldset>
+      <input placeholder="Age(In Years)" type="text" tabindex="1" name="ageVal" required value={{temp.age}}>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Total Billirubin in mg/dL" tabindex="2" required type="text" id="lname" name="TotalBillirubinVal" value={{temp.TotalBillirubin}}>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Conjugated Billirubin in mg/dL" tabindex="2" required type="text" id="fname" name="ConjugatedBillirubinVal" value={{temp.ConjugatedBillirubin}}>
+    </fieldset>
+    <fieldset>
+      <input placeholder="ALP in IU/L" tabindex="2" required type="text" id="lname" name="ALPVal" value={{temp.ALP}}>
+    </fieldset>
+    <fieldset>
+      <input placeholder="ALT in IU/L" tabindex="2" required type="text" id="fname" name="ALTVal" value={{temp.ALT}}>
+    </fieldset>
+    <fieldset>
+      <input placeholder="AST in IU/L" tabindex="2" required type="text" id="lname" name="ASTVal" value={{temp.AST}}>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Total Proteins g/dL" tabindex="2" required type="text" id="lname" name="ProteinsVal" value={{temp.Proteins}}>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Albumin in g/dL" tabindex="2" required type="text" id="lname"  name="AlbuminVal" value={{temp.Albumin}}>
+    </fieldset>
+    <fieldset>
+      <input placeholder="A/G ratio" tabindex="2" required type="text" id="lname" name="AGVal" value={{temp.AG}}>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" value="Submit">Submit</button>
+    </fieldset>
+  </form>
+</div>
+</center>
+{% endblock %}

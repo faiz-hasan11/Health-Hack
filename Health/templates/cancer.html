@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="test" >
+  <h1 class="small">– Lung Cancer Predictor–<h1/>
+</div>
+    <center>
+<div class="container">
+  <form id="contact" method="post" enctype="multipart/form-data" action="predcancer">
+    {% csrf_token %}
+    <h3>Please Enter Details</h3>
+    <fieldset>
+      <input placeholder="Age" type="text" tabindex="1" name="ageVal" required value={{temp.age}}>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Smokes per day" type="text" tabindex="1" name="smokeVal" required value={{temp.smoke}}>
+    </fieldset>
+    <fieldset>
+      <input placeholder="AreaQ" type="text" tabindex="1" name="areaVal" required value={{temp.area}}>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Alcohol" type="text" tabindex="1" name="alcVal" required value={{temp.alc}}>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" value="Submit">Submit</button>
+    </fieldset>
+  </form>
+</div>
+</center>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="test" >
+  <h1 class="small">– Kidney Disease Predictor–<h1/>
+</div>
+    <center>
+<div class="container">
+  <form id="contact" method="post" enctype="multipart/form-data" action="predictkidney">
+    {% csrf_token %}
+    <h3>Please Enter Details</h3>
+    <fieldset>
+      <input placeholder="Specific Gravity of Urine" type="text" tabindex="1" name="sgVal" required value={{temp.sg}}>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Albumin" type="text" tabindex="1" name="albVal" required value={{temp.alb}}>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Pus Cell" type="text" tabindex="1" name="pusVal" required value={{temp.pus}}>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Haemoglobin" type="text" tabindex="1" name="haeVal" required value={{temp.hae}}>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Packed Cell Volume" type="text" tabindex="1" name="pcVal" required value={{temp.pc}}>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Hypertension" type="text" tabindex="1" name="hpVal" required value={{temp.hp}}>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Diabetes Mellitus" type="text" tabindex="1" name="dmVal" required value={{temp.dm}}>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" value="Submit">Submit</button>
+    </fieldset>
+  </form>
+</div>
+</center>
+{% endblock %}

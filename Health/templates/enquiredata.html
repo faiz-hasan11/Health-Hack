@@ -1,0 +1,163 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <style media="screen">
+      /* start main rulez */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
+* {
+    font-family: 'Open Sans', arial, tahoma;
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111;
+  color: #fff;
+}
+.pricing-card {
+  background-color: #fff;
+  border-radius: 2.2rem;
+  box-shadow: 0 5px 20px rgba(12, 12, 12, 0.2);
+  padding: 1.5rem;
+  width: 400px;
+  transform: scale(.8);
+}
+.card-body {
+    border-radius: 1rem;
+    background: #EA3C53;
+    box-shadow: 0 4px 10px rgba(12, 12, 12, 0.2);
+    padding: 1rem 0;
+}
+.card-header {
+    background: #fff;
+    text-align: center;
+    height: 180px;
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-80px);
+    box-shadow: 0 4px 10px rgba(12, 12, 12, 0.2);
+    border-radius: 50%;
+    border: 2px solid #40E0D0;
+    color: #5dd5d2;
+    margin: 0 auto;
+}
+.card-header span {
+    position: absolute;
+    background: #fff;
+    text-align: center;
+    height: 70px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(50px,-80px);
+    box-shadow: 0 4px 10px rgba(12, 12, 12, 0.2);
+    border-radius: 50%;
+    border: 2px solid #40E0D0;
+    color: #5dd5d2;
+    margin: 0 auto;
+}
+.card-header h2 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
+.card-header p {text-transform: uppercase;}
+.card-inner {
+    transform: translateY(-5vh);
+    text-align: center;
+}
+.card-inner h1 {
+    padding: 1rem;
+    color: #fff;
+    justify-content: space-between;
+}
+.card-inner li {
+    padding: 1rem;
+    color: #fff;
+    justify-content: space-between;
+}
+.card-inner li:nth-child(odd) {
+    background: rgba(0,0,0,.10);
+}
+button {
+    background: #fff;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    border: 0;
+    border-radius: 2rem;
+    color: #5dd5d2;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: inherit;
+    box-shadow: 0 5px 14px rgba(12,12,12,0.2)
+}
+.fas {float: right}
+
+.card-min {
+    background-image: linear-gradient(180deg,
+                                      #EAECEE 0%,
+                                      #D5D8DC 53.65%,
+                                      #ABB2B9 100%);
+}
+.scale:hover {
+    transform: scale(.5);
+}
+
+    </style>
+  </head>
+  <body>
+        {% if not error %}
+        {% if "DRUGS" in data %}
+        <div class="pricing-card color">
+            <div class="card-body">
+                <br>
+                <div class="card-inner">
+                    <h1 style="color:black">SUGGESTED DRUGS</h1>
+                    <ul>
+                        {% for i in data.DRUGS %}
+                        <li>{{ i }}<i class="fas fa-check"></i></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        {% if "PROBLEMS" in data %}
+        <div class="pricing-card color">
+            <div class="card-body">
+                <br>
+                <div class="card-inner">
+                    <h1 style="color:black">SUGGESTED PROBLEMS</h1>
+                    <ul>
+                        {% for i in data.PROBLEMS %}
+                        <li>{{ i }}<i class="fas fa-check"></i></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        {% endif %}
+        {% if error %}
+        <div class="test" >
+            <h1 class="small" style="color:red">Connection Error! Retry</h1>
+        </div>
+        {% endif %}
+        <br>
+
+
+  </body>
+</html>

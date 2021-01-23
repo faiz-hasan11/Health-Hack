@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="test" >
+  <h1 class="small">– Kidney Disease Predictor–<h1/>
+</div>
+<center>
+  <br><br><br><br>
+  <div class="test" >
+    {% if scoreval == 1 %}
+    <h1 class="small" style="color:red">I worry,that you may have kidney disease<h1/>
+      {% else %}
+      <h1 class="small" style="color:green">Congrats! You dont have kidney disease</h1>
+      {% endif %}
+
+  </div>
+
+  <center>
+    <div class="button_cont" align="center"><a class="example_e" href="/" rel="nofollow noopener">Back to Home</a></div>
+  </center>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+</center
+{% endblock %}
