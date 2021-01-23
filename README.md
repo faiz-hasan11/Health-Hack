@@ -46,11 +46,11 @@ The app is now live at localhost.
 
 ## Screenshots
 * Landing Page
-![LandingPage](https://github.com/faiz-hasan11/Diabetes/blob/master/Screenshots/landingpage.png)
-* Input Page
-![Input Page](https://github.com/faiz-hasan11/Diabetes/blob/master/Screenshots/inputpage.png)
-* Prediction Page
-![Prediction Page](https://github.com/faiz-hasan11/Diabetes/blob/master/Screenshots/predictionpage.png)
-* Doctor Consult Page
-![Doctor Consult Page](https://github.com/faiz-hasan11/Diabetes/blob/master/Screenshots/doctorconsult.png)
+![LandingPage](https://github.com/faiz-hasan11/Health-Hack/blob/master/Screenshots/landing.png)
+* Input Page For Disease Prediction
+![Input Page](https://github.com/faiz-hasan11/Health-Hack/blob/master/Screenshots/pred.png)
+* Enquiry Page
+![Prediction Page](https://github.com/faiz-hasan11/Diabetes/blob/master/Screenshots/enq.png)
+* BMI Page
+![Doctor Consult Page](https://github.com/faiz-hasan11/Diabetes/blob/master/Screenshots/bmi.png)
 
