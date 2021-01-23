@@ -50,7 +50,7 @@ The app is now live at localhost.
 * Input Page For Disease Prediction
 ![Input Page](https://github.com/faiz-hasan11/Health-Hack/blob/master/Screenshots/pred.png)
 * Enquiry Page
-![Prediction Page](https://github.com/faiz-hasan11/Diabetes/blob/master/Screenshots/enq.png)
+![Enquiry Page](https://github.com/faiz-hasan11/Health-Hack/blob/master/Screenshots/enq.png)
 * BMI Page
-![Doctor Consult Page](https://github.com/faiz-hasan11/Diabetes/blob/master/Screenshots/bmi.png)
+![BMI Page](https://github.com/faiz-hasan11/Health-Hack/blob/master/Screenshots/bmi.png)
 
