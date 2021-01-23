@@ -1,4 +1,4 @@
-# Diabetes Website
+# Health Hack
 This website is a one stop solution for all your Health Needs. It provides 3 main features =>
 
 * It has a machine learning model integrated with it which helps to predict whether one suffers from diabetes or not. It has a form which takes as input various health condition of the user and predicts the result on the basis of the information given. Various models were made and at the end, RandomForest Classifier with best parameters was selected. It provided an accuracy of 90.9%. The data was taken from Kaggle which was uploaded by UCI Machine Learning.
